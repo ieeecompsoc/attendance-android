@@ -1,7 +1,9 @@
-package com.prathmeshranaut.attendancemsit;
+package com.prathmeshranaut.attendancemsit.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.prathmeshranaut.attendancemsit.R;
 
 public class MainActivity extends AppCompatActivity {
 
