@@ -1,4 +1,4 @@
-package Activities;
+package com.prathmeshranaut.attendancemsit.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,7 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import jatin.digital_attendance.R;
+import com.prathmeshranaut.attendancemsit.R;
 
 public class MainScreen extends AppCompatActivity {
     RecyclerView recyclerView;
@@ -19,17 +19,17 @@ public class MainScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_screen);
         setup=(CardView)findViewById(R.id.setup_card);
         setup.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        // open setup activity
-        Intent i = new Intent();
-        i.setClass(MainScreen.this,SetUp.class);
-        startActivity(i);
-    }
-});
+            @Override
+            public void onClick(View v) {
+                // open setup activity
+                Intent i = new Intent();
+                i.setClass(MainScreen.this,SetUp.class);
+                startActivity(i);
+            }
+        });
         attendance=(CardView)findViewById(R.id.attendance_card);
         attendance.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,12 +40,11 @@ public class MainScreen extends AppCompatActivity {
                 startActivity(i);
             }
         });
-//        recyclerView = (RecyclerView) findViewById(R.id.recycle);
-//        recyclerView.setHasFixedSize(true);
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.my_menu,menu);
+        getMenuInflater().inflate(R.menu.main_screen_menu,menu);
         return true;
     }
 
@@ -66,7 +65,7 @@ public class MainScreen extends AppCompatActivity {
             SharedPreferences prefs = getSharedPreferences("login", MODE_PRIVATE);
             Boolean restoredText = prefs.getBoolean("alreadysignin",true);
             if (restoredText = true) {
-               restoredText=false;
+                restoredText=false;
             }
         }
         return true;

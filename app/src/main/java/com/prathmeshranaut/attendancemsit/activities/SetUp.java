@@ -1,9 +1,9 @@
-package Activities;
+package com.prathmeshranaut.attendancemsit.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import jatin.digital_attendance.R;
+import com.prathmeshranaut.attendancemsit.R;
 
 public class SetUp extends AppCompatActivity {
 
