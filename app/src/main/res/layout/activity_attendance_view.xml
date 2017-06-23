@@ -29,7 +29,7 @@
          <TextView
              android:id="@+id/student_sno"
              style="@style/textstyle"
-             android:layout_to="@id/student_name"
+             android:layout_toRightOf="@id/student_name"
              android:layout_marginBottom="20dp"
              tools:text="S.No. 20"
              />
