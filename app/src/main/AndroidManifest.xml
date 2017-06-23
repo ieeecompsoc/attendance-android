@@ -16,9 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.MainScreen" />
-        <activity android:name=".activities.AttendanceView" />
-        <activity android:name=".activities.SetUp"></activity>
+        <activity android:name=".activities.MainScreen"
+            android:label="Digitizing Attendance App"/>
+        <activity android:name=".activities.AttendanceView"
+            android:label="Mark Attendance"/>
+        <activity android:name=".activities.SetUp"
+         android:label="Classes"></activity>
     </application>
 
 </manifest>
