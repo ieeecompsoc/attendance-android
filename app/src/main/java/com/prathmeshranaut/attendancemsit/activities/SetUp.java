@@ -22,34 +22,9 @@ public class SetUp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_up);
-        FetchStudents();
+
     }
 
-    private void FetchStudents() {
-        try {
 
 
-
-            ApiInterface apiInterface= ApiClient.getApiInterface();
-String header="";
-            Call<ArrayList<ReadingResponse>> showsettings = apiInterface.showsettings(header);
-            showsettings.enqueue(new Callback<ArrayList<ReadingResponse>>() {
-                @Override
-                public void onResponse(Call<ArrayList<ReadingResponse>> call, Response<ArrayList<ReadingResponse>> response) {
-
-                }
-
-                @Override
-                public void onFailure(Call<ArrayList<ReadingResponse>> call, Throwable t) {
-
-                }
-
-
-            });
-        } catch (Exception e) {
-            Log.d("mmm",e.getMessage().toString());
-
-            e.printStackTrace();
-        }
-    }
 }

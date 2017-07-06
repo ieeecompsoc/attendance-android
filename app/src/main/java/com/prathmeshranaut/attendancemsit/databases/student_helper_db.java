@@ -16,6 +16,7 @@ public class student_helper_db extends SQLiteOpenHelper {
         super(context,  "classDb",null, 1);
     }
 
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         String createtable=" CREATE TABLE "+ Constants.student_table_name+" ( "+Constants.student_id+" INTEGER PRIMARY KEY AUTOINCREMENT, "

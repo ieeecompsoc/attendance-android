@@ -15,6 +15,8 @@ public interface ApiInterface {
 
     @GET("values/Sheet1!A1:D5")
     public Call<ArrayList<ReadingResponse>> showsettings(@Header("spreadsheetId") String header);
+    @GET("values/Sheet1!A1:D3?majorDimension=COLUMNS")
+    public Call<ArrayList<Student_single>> showsettingsC(@Header("spreadsheetId") String header);
 
 }
 
