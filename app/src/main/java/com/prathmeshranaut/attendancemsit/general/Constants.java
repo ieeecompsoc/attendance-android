@@ -27,6 +27,6 @@ public class Constants {
     public static final String attendance_record_table_name="attendance_record";
     public static final String time="time";
     public static final String attendance_record_id="a_r_id";
-
+    public static final String date="date";
 
 }

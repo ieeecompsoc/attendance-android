@@ -83,7 +83,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:paddingLeft="30dp"
-                android:text="no"
+
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
@@ -92,7 +92,7 @@
                 android:layout_height="30dp"
                 android:layout_marginLeft="40dp"
                 android:id="@+id/thumsup"
-                android:background="@drawable/activity_round_button" />
+                android:background="@drawable/ic_thumb_up_black_24dp" />
 
             <TextView
                 android:id="@+id/no_of_absent_textView"
@@ -100,14 +100,14 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="50dp"
                 android:gravity="center"
-                android:hint="no"
+
                 android:textSize="20dp" />
             <ImageButton
                 android:layout_width="30dp"
                 android:id="@+id/thumsdown"
                 android:layout_height="30dp"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/activity_round_button" />
+                android:background="@drawable/ic_thumb_down_black_24dp" />
         </LinearLayout>
     </LinearLayout>
 
