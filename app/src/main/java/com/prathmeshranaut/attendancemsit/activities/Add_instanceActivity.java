@@ -33,6 +33,8 @@ FloatingActionButton floatingActionButton;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_instance2);
+        timeview=(TextView)findViewById(R.id.time);
+        dateview=(TextView) findViewById(R.id.date);
         floatingActionButton=(FloatingActionButton)findViewById(R.id.floating_button);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,7 +43,7 @@ FloatingActionButton floatingActionButton;
                 SQLiteDatabase db = attendance_helper.getWritableDatabase();
                 ContentValues cv = new ContentValues();
 
-
+                datePicker();
                 // put your values here
 //                cv.put();
 //                cv.put();
@@ -51,14 +53,8 @@ FloatingActionButton floatingActionButton;
                 db.insert(Constants.attendance_record_table_name, null, cv);
             }
         });
-        timeview=(TextView)findViewById(R.id.time);
-        dateview=(TextView) findViewById(R.id.date);
-        dateview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                datePicker();
-            }
-        });
+
+
     }
     private void datePicker(){
 

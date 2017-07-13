@@ -107,7 +107,7 @@ public class AttendanceView extends AppCompatActivity {
 
             ApiInterface apiInterface= ApiClient.getApiInterface();
             String header="";
-            Call<ArrayList<ReadingResponse>> showsettingsC = apiInterface.showsettingsC(header);
+            Call<ArrayList<ReadingResponse>> showsettingsC= apiInterface.showsettingsC(header);
             showsettingsC.enqueue(new Callback<ArrayList<ReadingResponse>>() {
                 @Override
                 public void onResponse(Call<ArrayList<ReadingResponse>> call, Response<ArrayList<ReadingResponse>> response) {
