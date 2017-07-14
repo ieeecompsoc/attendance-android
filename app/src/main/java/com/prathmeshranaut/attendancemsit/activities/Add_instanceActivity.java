@@ -43,18 +43,16 @@ FloatingActionButton floatingActionButton;
                 SQLiteDatabase db = attendance_helper.getWritableDatabase();
                 ContentValues cv = new ContentValues();
 
-                datePicker();
+
                 // put your values here
 //                cv.put();
 //                cv.put();
 //
 
-
+                datePicker();
                 db.insert(Constants.attendance_record_table_name, null, cv);
             }
         });
-
-
     }
     private void datePicker(){
 
