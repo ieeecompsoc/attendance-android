@@ -20,7 +20,7 @@ public class attendance_record_helper_db extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String createtable=" CREATE TABLE "+ Constants.attendance_record_table_name+" ( "+Constants.attendance_record_id+" INTEGER PRIMARY KEY AUTOINCREMENT, "
-                +Constants.time+" TEXT "+Constants.date+" TEXT "+Constants.student_id+" TEXT "+Constants.teacher_id+" TEXT); ";
+                +Constants.time+" TEXT "+Constants.no_of_present+" INTEGER "+Constants.no_of_absent+" INTEGER "+Constants.date+" TEXT "+Constants.student_id+" TEXT "+Constants.teacher_id+" TEXT); ";
 
         db.execSQL(createtable);
     }

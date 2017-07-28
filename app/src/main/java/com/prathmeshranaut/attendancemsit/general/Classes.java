@@ -6,7 +6,7 @@ package com.prathmeshranaut.attendancemsit.general;
 
 public class Classes {
     String name;
-    String subject;
+    String graduating_year;
     int id;
     int number_of_students;
 
@@ -14,17 +14,18 @@ public class Classes {
         return name;
     }
 
+    public String getGraduating_year() {
+        return graduating_year;
+    }
+
+    public void setGraduating_year(String graduating_year) {
+        this.graduating_year = graduating_year;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
 
-    public String getSubject() {
-        return subject;
-    }
-
-    public void setSubject(String subject) {
-        this.subject = subject;
-    }
 
     public int getId() {
         return id;
@@ -43,11 +44,11 @@ public class Classes {
     }
 
 
-    Classes(int id, String name, String subject, int number_of_students)
+    public Classes(int id, String name, String graduating_year, int number_of_students)
     {
             this.id=id;
             this.name=name;
-            this.subject=subject;
+            this.graduating_year=graduating_year;
             this.number_of_students=number_of_students;
     }
 }

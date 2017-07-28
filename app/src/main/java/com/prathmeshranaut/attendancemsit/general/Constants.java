@@ -28,5 +28,7 @@ public class Constants {
     public static final String time="time";
     public static final String attendance_record_id="a_r_id";
     public static final String date="date";
+    public static final String no_of_present="no_present";
+    public static final String no_of_absent="no_absent";
 
 }

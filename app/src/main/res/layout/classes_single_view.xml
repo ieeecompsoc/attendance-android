@@ -56,16 +56,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:paddingLeft="30dp"
-                android:text="SUBJECT"
+                android:text="GRADUATING YEAR"
                 android:textStyle="bold"
                 android:gravity="center"
                 android:textSize="20dp" />
 
             <TextView
-                android:id="@+id/subject_nametextView"
+                android:id="@+id/graduating_yeartextView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="subject name"
+                android:hint="graduating year"
                 android:gravity="center"
 
                 android:textSize="20dp" />

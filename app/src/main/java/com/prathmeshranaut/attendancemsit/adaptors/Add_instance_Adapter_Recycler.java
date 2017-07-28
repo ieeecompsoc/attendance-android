@@ -24,18 +24,29 @@ public class Add_instance_Adapter_Recycler extends RecyclerView.Adapter<Add_inst
     {
         this.add_instances=add_instances;
     }
-    public Add_instance_Adapter_Recycler.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        Context context = parent.getContext();
-        LayoutInflater inflater = LayoutInflater.from(context);
+//    public Add_instance_Adapter_Recycler.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+//        Context context = parent.getContext();
+//        LayoutInflater inflater = LayoutInflater.from(context);
+//
+//        // Inflate the custom layout
+//        View contactView = inflater.inflate(R.layout.add_instance_single_view, parent, false);
+//
+//        // Return a new holder instance
+//        RecyclerView.ViewHolder viewHolder = new Classes_Adapter_Recycler.ViewHolder(contactView);
+//        return (Add_instance_Adapter_Recycler.ViewHolder) viewHolder;
+//    }
+@Override
+public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    Context context = parent.getContext();
+    LayoutInflater inflater = LayoutInflater.from(context);
 
-        // Inflate the custom layout
-        View contactView = inflater.inflate(R.layout.add_instance_single_view, parent, false);
+    // Inflate the custom layout
+    View contactView = inflater.inflate(R.layout.add_instance_single_view, parent, false);
 
-        // Return a new holder instance
-        RecyclerView.ViewHolder viewHolder = new Classes_Adapter_Recycler.ViewHolder(contactView);
-        return (Add_instance_Adapter_Recycler.ViewHolder) viewHolder;
-    }
-
+    // Return a new holder instance
+    ViewHolder viewHolder = new ViewHolder(contactView);
+    return viewHolder;
+}
 
 
     public Add_instance_Adapter_Recycler(Context context,ArrayList<Add_Instance> add_instances)
@@ -43,10 +54,7 @@ public class Add_instance_Adapter_Recycler extends RecyclerView.Adapter<Add_inst
         this.mContext=context;
         this.add_instances=add_instances;
     }
-    @Override
-    public int getItemCount() {
-        return add_instances.size();
-    }
+
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.date.setText(add_instances.get(position).getCurrent_date());
@@ -56,6 +64,10 @@ public class Add_instance_Adapter_Recycler extends RecyclerView.Adapter<Add_inst
 
 
 
+    }
+    @Override
+    public int getItemCount() {
+        return add_instances.size();
     }
     public static class ViewHolder extends RecyclerView.ViewHolder
     {
