@@ -26,7 +26,8 @@ public class MainScreen extends AppCompatActivity {
             public void onClick(View v) {
                 // open setup activity
                 Intent i = new Intent();
-                i.setClass(MainScreen.this,SetUp.class);
+//                i.setClass(MainScreen.this,Add_instanceActivity.class);
+              i.setClass(MainScreen.this,SetUp.class);
                 startActivity(i);
             }
         });
@@ -36,7 +37,7 @@ public class MainScreen extends AppCompatActivity {
             public void onClick(View v) {
                 // open attendance mark activity
                 Intent i = new Intent();
-                i.setClass(MainScreen.this,AttendanceView.class);
+                i.setClass(MainScreen.this,Add_instanceActivity.class);
                 startActivity(i);
             }
         });

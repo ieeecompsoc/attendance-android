@@ -5,11 +5,11 @@ import android.os.Bundle;
 
 import com.prathmeshranaut.attendancemsit.R;
 
-public class AttendanceView extends AppCompatActivity {
+public class CoursesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_attendance_view);
+        setContentView(R.layout.activity_courses);
     }
 }

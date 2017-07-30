@@ -29,15 +29,15 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String passwardcheck=passward.getText().toString();
                 String namecheck=name.getText().toString();
+                if(namecheck.length()<2)
+                {
+                    Toast.makeText(LoginActivity.this,"Incorrect name",Toast.LENGTH_SHORT).show();
+                }
+                else
                 if(passwardcheck.length()<6 )
                 {
                     Toast.makeText(LoginActivity.this,"passward requires minimum 6 chracters",Toast.LENGTH_SHORT).show();
 //                Log.i("pppp", "onClick: ");
-                }
-                else
-                if(namecheck.length()<2)
-                {
-                    Toast.makeText(LoginActivity.this,"Incorrect name",Toast.LENGTH_SHORT).show();
                 }
                 else
                 {
