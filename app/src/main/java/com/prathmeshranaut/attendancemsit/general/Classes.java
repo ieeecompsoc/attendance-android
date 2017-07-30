@@ -25,7 +25,10 @@ public class Classes {
     public void setName(String name) {
         this.name = name;
     }
+       public Classes()
+       {
 
+       }
 
     public int getId() {
         return id;

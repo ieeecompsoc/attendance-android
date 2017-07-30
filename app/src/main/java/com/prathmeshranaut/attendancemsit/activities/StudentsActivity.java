@@ -8,9 +8,6 @@ import android.util.Log;
 
 import com.prathmeshranaut.attendancemsit.R;
 import com.prathmeshranaut.attendancemsit.adaptors.Student_single_Adapter_Recycler;
-import com.prathmeshranaut.attendancemsit.general.ApiClient;
-import com.prathmeshranaut.attendancemsit.general.ApiInterface;
-import com.prathmeshranaut.attendancemsit.general.ReadingResponse;
 import com.prathmeshranaut.attendancemsit.general.Student_single;
 
 import java.util.ArrayList;
@@ -37,44 +34,7 @@ public class StudentsActivity extends AppCompatActivity {
         recyclerView.setAdapter(student_single_adapter_recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        FetchStudentsC();
+//        FetchStudentsC();
     }
 
-
-    private void FetchStudentsC() {
-        try {
-
-
-
-            ApiInterface apiInterface= ApiClient.getApiInterface();
-            String header="";
-            Call<ArrayList<Student_single>> showsettingsC = apiInterface.showsettingsC(header);
-            showsettingsC.enqueue(new Callback<ArrayList<Student_single>>() {
-                @Override
-                public void onResponse(Call<ArrayList<Student_single>> call, Response<ArrayList<Student_single>> response) {
-                    ArrayList<Student_single> array2 = (ArrayList<Student_single>) response.body();
-                    if (array2 != null) {
-                        student.clear();
-
-                        student.addAll(array2);
-
-
-                       student_single_adapter_recycler.notifyDataSetChanged();
-
-                    }
-                }
-
-                @Override
-                public void onFailure(Call<ArrayList<Student_single>> call, Throwable t) {
-
-                }
-
-
-            });
-        } catch (Exception e) {
-            Log.d("TAG",e.getMessage().toString());
-
-            e.printStackTrace();
-        }
-    }
 }

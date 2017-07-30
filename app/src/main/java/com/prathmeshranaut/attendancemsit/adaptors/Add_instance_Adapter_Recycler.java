@@ -24,29 +24,18 @@ public class Add_instance_Adapter_Recycler extends RecyclerView.Adapter<Add_inst
     {
         this.add_instances=add_instances;
     }
-//    public Add_instance_Adapter_Recycler.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-//        Context context = parent.getContext();
-//        LayoutInflater inflater = LayoutInflater.from(context);
-//
-//        // Inflate the custom layout
-//        View contactView = inflater.inflate(R.layout.add_instance_single_view, parent, false);
-//
-//        // Return a new holder instance
-//        RecyclerView.ViewHolder viewHolder = new Classes_Adapter_Recycler.ViewHolder(contactView);
-//        return (Add_instance_Adapter_Recycler.ViewHolder) viewHolder;
-//    }
-@Override
-public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-    Context context = parent.getContext();
-    LayoutInflater inflater = LayoutInflater.from(context);
+    public Add_instance_Adapter_Recycler.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        Context context = parent.getContext();
+        LayoutInflater inflater = LayoutInflater.from(context);
 
-    // Inflate the custom layout
-    View contactView = inflater.inflate(R.layout.add_instance_single_view, parent, false);
+        // Inflate the custom layout
+        View contactView = inflater.inflate(R.layout.add_instance_single_view, parent, false);
 
-    // Return a new holder instance
-    ViewHolder viewHolder = new ViewHolder(contactView);
-    return viewHolder;
-}
+        // Return a new holder instance
+        RecyclerView.ViewHolder viewHolder = new Add_instance_Adapter_Recycler.ViewHolder(contactView);
+        return (Add_instance_Adapter_Recycler.ViewHolder) viewHolder;
+    }
+
 
 
     public Add_instance_Adapter_Recycler(Context context,ArrayList<Add_Instance> add_instances)
@@ -57,10 +46,10 @@ public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.date.setText(add_instances.get(position).getCurrent_date());
-        holder.time.setText(add_instances.get(position).getCurrent_time());
-        holder.number_of_present.setText(add_instances.get(position).getNo_of_present());
-        holder.number_of_absent.setText(add_instances.get(position).getNo_of_absent());
+        holder.date.setText(add_instances.get(position).getDate());
+        holder.time.setText(add_instances.get(position).getTime());
+        holder.number_of_present.setText(Integer.toString(add_instances.get(position).getNo_of_present()));
+        holder.number_of_absent.setText(Integer.toString(add_instances.get(position).getNo_of_absent()));
 
 
 

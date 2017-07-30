@@ -33,7 +33,7 @@ public class Student_single_Adapter_Recycler extends RecyclerView.Adapter<Studen
         View contactView = inflater.inflate(R.layout.student_single_view, parent, false);
 
         // Return a new holder instance
-        RecyclerView.ViewHolder viewHolder = new Classes_Adapter_Recycler.ViewHolder(contactView);
+        RecyclerView.ViewHolder viewHolder = new Student_single_Adapter_Recycler.ViewHolder(contactView);
         return (Student_single_Adapter_Recycler.ViewHolder) viewHolder;
 
     }
@@ -52,9 +52,9 @@ public class Student_single_Adapter_Recycler extends RecyclerView.Adapter<Studen
     public void onBindViewHolder(ViewHolder holder, int position) {
 
        holder.student_name.setText(student_singles.get(position).getName());
-       holder.rollno.setText(student_singles.get(position).getRollno());
-        holder.present.setText(student_singles.get(position).getPresent());
-        holder.present.setText(student_singles.get(position).getPresent());
+       holder.rollno.setText(Integer.toString(student_singles.get(position).getSno()));
+        holder.present.setText(Integer.toString(student_singles.get(position).getPresent()));
+        holder.absent.setText(Integer.toString(student_singles.get(position).getAbsent()));
     }
     public static class ViewHolder extends RecyclerView.ViewHolder
     {

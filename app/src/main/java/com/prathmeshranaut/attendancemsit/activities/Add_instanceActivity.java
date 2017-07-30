@@ -93,17 +93,17 @@ FloatingActionButton floatingActionButton;
 
         while (c.moveToNext()) {
 
-
-            int id = c.getInt(c.getColumnIndex(Constants.attendance_record_id));
-            int present=c.getInt(c.getColumnIndex(Constants.no_of_present));
-            int absent=c.getInt(c.getColumnIndex(Constants.no_of_absent));
-
-
-            String date = c.getString(c.getColumnIndex(Constants.date));
-            String time = c.getString(c.getColumnIndex(Constants.time));
-
-            Add_Instance addi = new Add_Instance(id,date, time,present,absent);
-            add_instances.add(addi);
+//
+//            int id = c.getInt(c.getColumnIndex(Constants.attendance_record_id));
+//            int present=c.getInt(c.getColumnIndex(Constants.no_of_present));
+//            int absent=c.getInt(c.getColumnIndex(Constants.no_of_absent));
+//
+//
+//            String date = c.getString(c.getColumnIndex(Constants.date));
+//            String time = c.getString(c.getColumnIndex(Constants.time));
+//
+//            Add_Instance addi = new Add_Instance(id,date, time,present,absent);
+//            add_instances.add(addi);
 
 
         }

@@ -27,7 +27,7 @@ public class MainScreen extends AppCompatActivity {
                 // open setup activity
                 Intent i = new Intent();
 //                i.setClass(MainScreen.this,Add_instanceActivity.class);
-              i.setClass(MainScreen.this,SetUpTemp.class);
+              i.setClass(MainScreen.this,SetUp.class);
                 startActivity(i);
             }
         });

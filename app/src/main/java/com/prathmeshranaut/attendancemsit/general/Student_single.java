@@ -6,10 +6,10 @@ package com.prathmeshranaut.attendancemsit.general;
 
 public class Student_single {
     String name;
-    int rollno;
+    int Sno;
     int present;
     int absent;
-    int id;
+    int class_id;
 
     public String getName() {
         return name;
@@ -19,12 +19,12 @@ public class Student_single {
         this.name = name;
     }
 
-    public int getRollno() {
-        return rollno;
+    public int getSno() {
+        return Sno;
     }
 
-    public void setRollno(int rollno) {
-        this.rollno = rollno;
+    public void setSno(int sno) {
+        Sno = sno;
     }
 
     public int getPresent() {
@@ -43,22 +43,23 @@ public class Student_single {
         this.absent = absent;
     }
 
-    public int getId() {
-        return id;
+    public int getClass_id() {
+        return class_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setClass_id(int class_id) {
+        this.class_id = class_id;
     }
 
-    Student_single(int id, String name, int rollno, int present, int absent)
+    Student_single()
     {
-        this.id=id;
-
+    }
+    Student_single(int class_id, String name, int Sno, int present, int absent)
+    {
+        this.class_id=class_id;
         this.name=name;
-        this.rollno=rollno;
+        this.Sno=Sno;
         this.present=present;
         this.absent=absent;
     }
-
 }

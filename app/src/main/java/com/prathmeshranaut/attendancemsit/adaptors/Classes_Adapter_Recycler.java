@@ -52,7 +52,7 @@ public class Classes_Adapter_Recycler extends RecyclerView.Adapter<Classes_Adapt
 
         holder.graduating_year.setText(classes.get(position).getGraduating_year());
         holder.coursename.setText(classes.get(position).getName());
-        holder.number.setText(classes.get(position).getNumber_of_students());
+        holder.number.setText(Integer.toString(classes.get(position).getNumber_of_students()));
 
 
     }

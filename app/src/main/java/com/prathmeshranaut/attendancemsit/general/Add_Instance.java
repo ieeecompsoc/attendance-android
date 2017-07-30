@@ -5,28 +5,59 @@ package com.prathmeshranaut.attendancemsit.general;
  */
 
 public class Add_Instance {
-    String current_date;
-    String current_time;
+    String date;
+    String time;
     int no_of_absent;
     int id;
     int no_of_present;
-    String teacherid;
-    String studentid;
+    int teacher_id;
+    int student_id;
 
-    public String getCurrent_date() {
-        return current_date;
+    public int getTeacher_id() {
+        return teacher_id;
     }
 
-    public void setCurrent_date(String current_date) {
-        this.current_date = current_date;
+    public void setTeacher_id(int teacher_id) {
+        this.teacher_id = teacher_id;
     }
 
-    public String getCurrent_time() {
-        return current_time;
+    public int getStudent_id() {
+        return student_id;
     }
 
-    public void setCurrent_time(String current_time) {
-        this.current_time = current_time;
+    public void setStudent_id(int student_id) {
+        this.student_id = student_id;
+    }
+
+    Add_Instance()
+
+    {
+
+    }
+   Add_Instance(int id,String date,String time,int no_of_absent,int no_of_present,int teacher_id,int student_id)
+   {
+       this.id=id;
+       this.date=date;
+       this.time=time;
+       this.no_of_absent=no_of_absent;
+       this.no_of_present=no_of_present;
+       this.teacher_id=teacher_id;
+       this.student_id=student_id;
+   }
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public int getNo_of_absent() {
@@ -53,13 +84,6 @@ public class Add_Instance {
         this.no_of_present = no_of_present;
     }
 
-    public Add_Instance(int id, String current_date, String current_time, int no_of_present, int no_of_absent)
-    {
-        this.id=id;
-        this.current_date=current_date;
-        this.current_time=current_time;
-     this.no_of_present=no_of_present;
-        this.no_of_absent=no_of_absent;
 
-    }
+
 }
